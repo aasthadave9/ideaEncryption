@@ -3,7 +3,7 @@
 -- Engineer: Aastha Dave
 -- 
 -- Create Date:    11:56:40 05/08/2023 
--- Design Name: 
+-- Design Name:    16-bit XOR
 -- Module Name:    xorop - Behavioral 
 -- Project Name: 
 -- Target Devices: 
