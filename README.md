@@ -5,7 +5,7 @@ This repository contains a VHDL based Hardware implementation of the Internation
 This project uses Xilinx® ISE WebPack™ and Spartan-3E FPGA (XC3S500E-4FG320C)
 
 ## The IDEA Algorithm
-<img width="303" alt="Screenshot_2" src="https://github.com/aasthadave9/ideaEncryption/assets/86701156/e7a8dace-7622-419b-8d91-86b32fedcc94">
+<img width="500" alt="Screenshot_2" src="https://github.com/aasthadave9/ideaEncryption/assets/86701156/e7a8dace-7622-419b-8d91-86b32fedcc94">
 
 ## Implementations & Module Requirements
 1. Direct Implementation
