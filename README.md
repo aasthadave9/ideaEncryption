@@ -1,5 +1,5 @@
 # ideaEncryption
-This repository contains a VHDL based Hardware implementation of the International Data Encryption Algorithm (IDEA) on the Spartan 3E FPGA
+This repository contains a VHDL-based hardware implementation of the International Data Encryption Algorithm (IDEA) on the Spartan 3E FPGA
 
 ## Tools & Hardware
 This project uses Xilinx® ISE WebPack™ and Spartan-3E FPGA (XC3S500E-4FG320C)
