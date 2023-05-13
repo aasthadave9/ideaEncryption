@@ -3,7 +3,7 @@
 -- Engineer: Aastha Dave
 -- 
 -- Create Date:    15:07:02 05/08/2023 
--- Design Name:    Module 2^16 Adder
+-- Design Name:    Modulo 2^16 Adder
 -- Module Name:    addop - Behavioral 
 -- Project Name: 
 -- Target Devices: 
