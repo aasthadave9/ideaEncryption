@@ -9,6 +9,7 @@ This project uses Xilinx® ISE WebPack™ and Spartan-3E FPGA (XC3S500E-4FG320C)
 
 ## Implementations & Module Requirements
 1. Direct Implementation
+
 Module | Spec
 ------------ | -------------
 XOR | 48 XOR modules with 16-bit wide word input & output
@@ -17,6 +18,7 @@ Multiplier | 34 modules of 16-bit multiplication modulo (2^16 + 1) using Low-Hig
 Round Module | 8 rounds of Encryption and Decryption using XOR, adder and multiplier
 Output Tranformation Module | Transforming round module output for encryption
 Encryption Module | Implementation of encryption process for a fixed key
+
 
 
 
