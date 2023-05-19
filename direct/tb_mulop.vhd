@@ -1,16 +1,16 @@
 --------------------------------------------------------------------------------
 -- Company: 
--- Engineer: Aastha Dave
+-- Engineer:
 --
--- Create Date:   18:37:45 05/08/2023
+-- Create Date:   21:10:55 05/09/2023
 -- Design Name:   
--- Module Name:   /home/ise/vhdl/submit/direct/tb_mullop.vhd
+-- Module Name:   /home/ise/vhdl/submit/direct/tb_mulop.vhd
 -- Project Name:  idea
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: mullop
+-- VHDL Test Bench Created by ISE for module: mulop
 -- 
 -- Dependencies:
 -- 
@@ -34,88 +34,85 @@ use IEEE.NUMERIC_STD.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY tb_mullop IS
-END tb_mullop;
+ENTITY tb_mulop IS
+END tb_mulop;
  
-ARCHITECTURE behavior OF tb_mullop IS 
+ARCHITECTURE behavior OF tb_mulop IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT mullop
+    COMPONENT mulop
     PORT(
-         a : IN  std_logic_vector(15 downto 0);
-         b : IN  std_logic_vector(15 downto 0);
-         o : OUT  std_logic_vector(15 downto 0)
+         I_1 : IN  std_logic_vector(15 downto 0);
+         I_2 : IN  std_logic_vector(15 downto 0);
+         O_1 : OUT  std_logic_vector(15 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal a : std_logic_vector(15 downto 0) := (others => '0');
-   signal b : std_logic_vector(15 downto 0) := (others => '0');
+   signal I_1 : std_logic_vector(15 downto 0) := (others => '0');
+   signal I_2 : std_logic_vector(15 downto 0) := (others => '0');
 
  	--Outputs
-   signal o : std_logic_vector(15 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
+   signal O_1 : std_logic_vector(15 downto 0);
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: mullop PORT MAP (
-          a => a,
-          b => b,
-          o => o
+   uut: mulop PORT MAP (
+          I_1 => I_1,
+          I_2 => I_2,
+          O_1 => O_1
         );
- 
+
    -- Stimulus process
-   stim_proc_a : process
+   stim_proc: process
    begin		
-		a <= x"0000";
-		b <= x"0000";
-		--report "a =" & std_logic_vector'image(a)
-		--report "b =" &
+		I_1 <= x"0000";
+		I_2 <= x"0000";
 		wait for 10 ns;
 		
-		a <= x"0001";
-		b <= x"0000";
+		I_1 <= x"0001";
+		I_2 <= x"0000";
 		wait for 10 ns;
 		
-		a <= x"0001";
-		b <= x"0001";
+		I_1 <= x"0001";
+		I_2 <= x"0001";
 		wait for 10 ns;
 
-		a <= x"0003";  
-		b <= x"0001";
+		I_1 <= x"0003";  
+		I_2 <= x"0001";
 		wait for 10 ns;
 		
-		a <= x"0003";  
-		b <= x"0003";
+		I_1 <= x"0003";  
+		I_2 <= x"0003";
 		wait for 10 ns;
 		
-		a <= x"7fff";  
-		b <= x"0003";
+		I_1 <= x"7fff";  
+		I_2 <= x"0003";
 		wait for 10 ns;
 		
-		a <= x"7fff";  
-		b <= x"7fff";
+		I_1 <= x"7fff";  
+		I_2 <= x"7fff";
 		wait for 10 ns;
 		
-		a <= x"ffff";  
-		b <= x"7fff";
+		I_1 <= x"ffff";  
+		I_2 <= x"7fff";
 		wait for 10 ns;
 		
-		a <= x"ffff";  
-		b <= x"ffff";
+		I_1 <= x"ffff";  
+		I_2 <= x"ffff";
 		wait for 10 ns;
 		
-		a <= x"8000";  
-		b <= x"ffff";
+		I_1 <= x"8000";  
+		I_2 <= x"ffff";
 		wait for 10 ns;
 		
-		a <= x"8000";  
-		b <= x"8000";
+		I_1 <= x"8000";  
+		I_2 <= x"8000";
       wait;
+
    end process;
 
 END;
