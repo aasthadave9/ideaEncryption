@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: Aastha Dave
+-- Engineer: 
 -- 
 -- Create Date:    01:11:29 05/09/2023 
--- Design Name:    Round Module
+-- Design Name: 
 -- Module Name:    round - Behavioral 
 -- Project Name: 
 -- Target Devices: 
@@ -65,11 +65,11 @@ architecture Behavioral of round is
         );
     end component;
 	 
-	 component mullop is
+	 component mulop is
         port (
-            a : in  std_logic_vector;
-            b : in  std_logic_vector;
-            o : out std_logic_vector
+            I_1 : in  std_logic_vector(15 downto 0);
+            I_2 : in  std_logic_vector(15 downto 0);
+            O_1 : out std_logic_vector(15 downto 0)
         );
     end component;
 	 
@@ -139,29 +139,29 @@ begin
             b => mull_4_sig,
             sum => add_4_sig
         );
-    mull_1 : mullop
+    mull_1 : mulop
         port map (
-            a => x1,
-            b => z1,
-            o => mull_1_sig
+            I_1 => x1,
+            I_2 => z1,
+            O_1 => mull_1_sig
         );
-    mull_2 : mullop
+    mull_2 : mulop
         port map (
-            a => x4,
-            b => z4,
-            o => mull_2_sig
+            I_1 => x4,
+            I_2 => z4,
+            O_1 => mull_2_sig
         );
-    mull_3 : mullop
+    mull_3 : mulop
         port map (
-            a => z5,
-            b => xor_1_sig,
-            o => mull_3_sig
+            I_1 => z5,
+            I_2 => xor_1_sig,
+            O_1 => mull_3_sig
         );
-    mull_4 : mullop
+    mull_4 : mulop
         port map (
-            a => add_3_sig,
-            b => z6,
-            o => mull_4_sig
+            I_1 => add_3_sig,
+            I_2 => z6,
+            O_1 => mull_4_sig
         );
 
 end Behavioral;
