@@ -1,10 +1,10 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: Aastha Dave
+-- Engineer: 
 -- 
--- Create Date:    16:43:39 05/08/2023 
--- Design Name:    Modulo (2^16 + 1) Multiplier
--- Module Name:    mullop - Behavioral 
+-- Create Date:     
+-- Design Name: 
+-- Module Name:    mulop - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -31,17 +31,18 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mullop is
-    Port ( a : in  STD_LOGIC_VECTOR (15 downto 0);
-           b : in  STD_LOGIC_VECTOR (15 downto 0);
-           o : out  STD_LOGIC_VECTOR (15 downto 0));
-end mullop;
+entity mulop is
+    Port ( I_1 : in  STD_LOGIC_VECTOR (15 downto 0);
+           I_2 : in  STD_LOGIC_VECTOR (15 downto 0);
+           O_1 : out  STD_LOGIC_VECTOR (15 downto 0));
+end mulop;
 
-architecture Behavioral of mullop is
+architecture Behavioral of mulop is
 begin
 	--check if inputs are =0x0000 then make it 2^16 (add a 17th bit and make it 1)
 	--do low high algo, get 33 bits worst case, 
-	modify_inputs: process(a, b)
+	
+	modify_inputs: process(I_1, I_2)
 	variable temp_a : std_logic_vector (16 downto 0);
 	variable temp_b : std_logic_vector (16 downto 0);
 	variable temp_o : std_logic_vector (33 downto 0);
@@ -50,16 +51,16 @@ begin
 	variable remainder : std_logic_vector(15 downto 0);
 	begin
 	
-		if a = x"0000" then 
+		if I_1 = x"0000" then 
 			temp_a := "10000000000000000";
 		else
-			temp_a := '0' & a;
+			temp_a := '0' & I_1;
 		end if;
 		
-		if b = x"0000" then 
+		if I_2 = x"0000" then 
 			temp_b := "10000000000000000";
 		else
-			temp_b := '0' & b;
+			temp_b := '0' & I_2;
 		end if;
 
 		--abmod(2^16) is lower 16bits of output, abdiv(2^16) is upper 16 bits of output
@@ -72,8 +73,8 @@ begin
 		else
 			temp_out := ('0' & remainder) - quotient + "10000000000000001";
 		end if;
-		o <= temp_out(15 downto 0);
+		O_1 <= temp_out(15 downto 0);
 	end process;
-	
+
 end Behavioral;
 
