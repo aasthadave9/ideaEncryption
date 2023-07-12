@@ -1,0 +1,2 @@
+vhdl isim_temp "mullop.vhd"
+vhdl isim_temp "tb_mullop.vhd"

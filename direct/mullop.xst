@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/vhdl/submit/direct/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/vhdl/submit/direct/xst"
+elaborate
+-ifn mullop.prj
+-ifmt mixed

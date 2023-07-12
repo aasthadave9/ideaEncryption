@@ -1,0 +1,3 @@
+vhdtdtfi -prj idea -o /home/ise/vhdl/submit/direct/mullop.vhi -module mullop -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mullop.vhd 
+vhdtdtfi -lib work mullop.vhd -prj idea -o mullop.spl -module mullop -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e mullop.spl /home/ise/vhdl/submit/direct/mullop.sym 
