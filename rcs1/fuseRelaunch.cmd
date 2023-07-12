@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/vhdl/submit/rcs1/tb_idea_single_isim_beh.exe" -prj "/home/ise/vhdl/submit/rcs1/tb_idea_single_beh.prj" "work.tb_idea_single" 
